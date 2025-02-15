@@ -1,0 +1,160 @@
+openapi: 3.0.3
+info:
+  title: Users API
+  version: 1.0.0
+  description: API for managing users
+servers:
+  - url: http://localhost:3000
+paths:
+  /users:
+    get:
+      summary: Retrieve all users
+      responses:
+        '200':
+          description: List of users
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+    post:
+      summary: Create a new user
+      requestBody:
+        description: User data for creation
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateUserDto'
+      responses:
+        '201':
+          description: User successfully created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+  /users/{id}:
+    get:
+      summary: Retrieve a user by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID of the user to retrieve
+      responses:
+        '200':
+          description: User found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '404':
+          description: User not found
+    patch:
+      summary: Update a user by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID of the user to update
+      requestBody:
+        description: User data for update
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateUserDto'
+      responses:
+        '200':
+          description: User successfully updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '404':
+          description: User not found
+    delete:
+      summary: Delete a user by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID of the user to delete
+      responses:
+        '204':
+          description: User successfully deleted
+        '404':
+          description: User not found
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: John Doe
+        username:
+          type: string
+          example: johndoe
+        email:
+          type: string
+          format: email
+          example: john@example.com
+        password:
+          type: string
+          example: secret
+        created_at:
+          type: string
+          format: date-time
+          example: '2025-02-15T10:00:00Z'
+        updated_at:
+          type: string
+          format: date-time
+          example: '2025-02-15T10:00:00Z'
+    CreateUserDto:
+      type: object
+      required:
+        - name
+        - username
+        - email
+        - password
+      properties:
+        name:
+          type: string
+          example: John Doe
+        username:
+          type: string
+          example: johndoe
+        email:
+          type: string
+          format: email
+          example: john@example.com
+        password:
+          type: string
+          example: secret
+    UpdateUserDto:
+      type: object
+      properties:
+        name:
+          type: string
+          example: John Doe Updated
+        username:
+          type: string
+          example: johndoeupdated
+        email:
+          type: string
+          format: email
+          example: johnupdated@example.com
+        password:
+          type: string
+          example: newsecret
