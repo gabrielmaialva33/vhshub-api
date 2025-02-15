@@ -5,7 +5,8 @@ import {
 } from '@nestjs/platform-fastify';
 import { Logger } from '@nestjs/common';
 
-import { AppModule } from './app.module';
+import { AppModule } from '@src/app.module';
+import { Env } from '@src/env';
 
 const logger = new Logger('Bootstrap');
 
@@ -14,10 +15,11 @@ async function bootstrap() {
     AppModule,
     new FastifyAdapter(),
   );
-  await app.listen(process.env.PORT ?? 3000).then(
+
+  await app.listen(Env.PORT, Env.HOST).then(
     () =>
       logger.log(
-        `Server running on http://localhost:${process.env.PORT ?? 3000}`,
+        `Server running on http://localhost:${Env.PORT} in ${Env.NODE_ENV} mode`,
       ),
     (err) => logger.error(`Error starting server: ${err}`),
   );
