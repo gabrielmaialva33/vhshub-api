@@ -1,99 +1,126 @@
+<h1 align="center">
+  <br>
+  <img src=".github/assets/tape.png" alt="VHS Hub" width="200">
+  <br>
+  VHS Hub: Your Cinema Universe
+  <br>
+</h1>
+
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+  <strong>From classic tapes to modern streams - all in one retro-modern hub</strong>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+<p align="center">
+  <img src="https://img.shields.io/github/license/gabrielmaialva33/vhshub-api?color=ff80ff&style=flat" alt="License" />
+  <img src="https://img.shields.io/github/languages/top/gabrielmaialva33/vhshub-api?style=flat" alt="GitHub top language">
+  <img src="https://img.shields.io/github/repo-size/gabrielmaialva33/vhshub-api?style=flat" alt="Repository size">
+  <img src="https://img.shields.io/badge/retro-modern-ff00ff?style=flat" alt="Retro Modern">
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+<br>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+<p align="center">
+  <a href="#film_projector-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#art-branding">Branding</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#gear-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tech-stack">Tech Stack</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-roadmap">Roadmap</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-license">License</a>
+</p>
 
-## Project setup
+<br>
 
-```bash
-$ pnpm install
-```
+## :film_projector: About
 
-## Compile and run the project
+**VHS Hub** is a retro-modern platform that combines nostalgic movie experiences with modern streaming technology. Our platform evolves through strategic phases:
 
-```bash
-# development
-$ pnpm run start
+- **Phase 1**: Smart Watchlist with social features
+- **Phase 2**: Integrated Streaming Platform
+- **Future**: AI Recommendations & Community Features
 
-# watch mode
-$ pnpm run start:dev
+<br>
 
-# production mode
-$ pnpm run start:prod
-```
+## :art: Branding
 
-## Run tests
+### Visual Identity
+- **Colors**:
+  ``` Retro Electric: #FF6B6B (coral), #4ECDC4 (teal), #FFE66D (yellow) ```
+  ``` Modern Neutrals: #2D2D2D (dark gray), #F7FFF7 (off white) ```
+- **Typography**:
+    - Headings: 'Black Ops One' (Retro)
+    - Body: 'Inter' (Modern sans-serif)
+- **Logo**: Stylized VHS tape with streaming waves emerging from the hub center
 
-```bash
-# unit tests
-$ pnpm run test
+<br>
 
-# e2e tests
-$ pnpm run test:e2e
+## :gear: Features
 
-# test coverage
-$ pnpm run test:cov
-```
+### Core Functionality
+- **Smart Watchlist**
+    - TMDB API integration
+    - Public/private lists
+    - Letterboxd sync
+- **Streaming Hub**
+    - Integrated video player
+    - Cross-device compatibility
+    - Hard-coded subtitles
+- **Community**
+    - Shared watch parties
+    - Group discussions
+    - List sharing
 
-## Deployment
+<br>
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+## :computer: Tech Stack
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+**Frontend**
+- React Native (Expo)
+- NativeWind (Styling)
+- React Navigation
 
-```bash
-$ pnpm install -g mau
-$ mau deploy
-```
+**Backend**
+- Node.js
+- MongoDB
+- TMDB API
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+**DevOps**
+- Docker
+- GitHub Actions
+- AWS EC2
 
-## Resources
+<br>
 
-Check out a few resources that may come in handy when working with NestJS:
+## :rocket: Roadmap
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+### Phase 1 - Watchlist (Q4 2023)
+- [ ] TMDB API integration
+- [ ] Cross-platform sync
+- [ ] Social sharing
 
-## Support
+### Phase 2 - Streaming (Q1 2024)
+- [ ] Video player integration
+- [ ] Device casting
+- [ ] Premium subscriptions
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+<br>
 
-## Stay in touch
+## :memo: License
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## License
+<br>
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+## :clapper: Contributors
+
+| [![Maia](https://avatars.githubusercontent.com/u/26732067?size=100)](https://github.com/gabrielmaialva33) |
+|-----------------------------------------------------------------------------------------------------------|
+| [Maia](https://github.com/gabrielmaialva33)                                                               |
+
+**Made with :heartpulse: and VHS static**  
+*"Your hub for movies, from classic to streaming"*
+
+<br/>
+<br/>
+
+<p align="center"><img src="https://raw.githubusercontent.com/gabrielmaialva33/gabrielmaialva33/master/assets/gray0_ctp_on_line.svg?sanitize=true" /></p>
+<p align="center">&copy; 2017-present <a href="https://github.com/gabrielmaialva33/" target="_blank">Maia</a>
