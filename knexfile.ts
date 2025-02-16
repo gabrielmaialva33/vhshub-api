@@ -1,6 +1,7 @@
 import 'dotenv/config';
 
 import * as path from 'path';
+import * as process from 'process';
 import type { Knex } from 'knex';
 
 const config: { [key: string]: Knex.Config } = {
@@ -11,7 +12,7 @@ const config: { [key: string]: Knex.Config } = {
         process.cwd(),
         'src',
         'database',
-        process.env.DATABASE_URL,
+        process.env.DATABASE_URL!,
       ),
     },
     useNullAsDefault: true,
@@ -23,3 +24,5 @@ const config: { [key: string]: Knex.Config } = {
     },
   },
 };
+
+module.exports = config;
