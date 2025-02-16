@@ -92,12 +92,19 @@
 
 ## :rocket: Roadmap
 
-### Phase 1 - Watchlist (Q4 2023)
+### Phase 1 - Watchlist (Q1 2024)
+- [x] CRUD users
+- [ ] CRUD movies
+- [ ] CRUD favorites
+- [ ] CRUD watchlists
 - [ ] TMDB API integration
-- [ ] Cross-platform sync
-- [ ] Social sharing
+- [ ] Sign-in authentication
+- [ ] Sign-up authentication
+- [ ] User profiles
 
-### Phase 2 - Streaming (Q1 2024)
+### Phase 2 - Streaming (Q2 2024)
+- [ ] OAuth integration (Google, Telegram)
+- [ ] Video streaming
 - [ ] Video player integration
 - [ ] Device casting
 - [ ] Premium subscriptions
