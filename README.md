@@ -32,7 +32,8 @@
 
 ## :film_projector: About
 
-**VHS Hub** is a retro-modern platform that combines nostalgic movie experiences with modern streaming technology. Our platform evolves through strategic phases:
+**VHS Hub** is a retro-modern platform that combines nostalgic movie experiences with modern streaming technology. Our
+platform evolves through strategic phases:
 
 - **Phase 1**: Smart Watchlist with social features
 - **Phase 2**: Integrated Streaming Platform
@@ -43,6 +44,7 @@
 ## :art: Branding
 
 ### Visual Identity
+
 - **Colors**:
   ``` Retro Electric: #FF6B6B (coral), #4ECDC4 (teal), #FFE66D (yellow) ```
   ``` Modern Neutrals: #2D2D2D (dark gray), #F7FFF7 (off white) ```
@@ -56,6 +58,7 @@
 ## :gear: Features
 
 ### Core Functionality
+
 - **Smart Watchlist**
     - TMDB API integration
     - Public/private lists
@@ -74,16 +77,19 @@
 ## :computer: Tech Stack
 
 **Frontend**
+
 - React Native (Expo)
 - NativeWind (Styling)
 - React Navigation
 
 **Backend**
+
 - Node.js
 - MongoDB
 - TMDB API
 
 **DevOps**
+
 - Docker
 - GitHub Actions
 - AWS EC2
@@ -93,6 +99,7 @@
 ## :rocket: Roadmap
 
 ### Phase 1 - Watchlist (Q1 2024)
+
 - [x] CRUD users
 - [ ] CRUD movies
 - [ ] CRUD favorites
@@ -103,6 +110,7 @@
 - [ ] User profiles
 
 ### Phase 2 - Streaming (Q2 2024)
+
 - [ ] OAuth integration (Google, Telegram)
 - [ ] Video streaming
 - [ ] Video player integration
@@ -130,4 +138,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <br/>
 
 <p align="center"><img src="https://raw.githubusercontent.com/gabrielmaialva33/gabrielmaialva33/master/assets/gray0_ctp_on_line.svg?sanitize=true" /></p>
-<p align="center">&copy; 2017-present <a href="https://github.com/gabrielmaialva33/" target="_blank">Maia</a>
+<p align="center">&copy; 2025-present <a href="https://github.com/gabrielmaialva33/" target="_blank">Maia</a> & <a href="https://github.com/isaqu3d/" target="_blank">Isaque</a></p>
