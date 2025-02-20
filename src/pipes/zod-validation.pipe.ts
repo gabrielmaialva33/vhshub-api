@@ -14,7 +14,7 @@ export class ZodValidationPipe implements PipeTransform {
       return parsedValue;
     } catch (error) {
       throw new UnprocessableEntityException({
-        error,
+        ...error,
       });
     }
   }
