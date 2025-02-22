@@ -3,18 +3,24 @@ import { User } from '../entities/user.entity';
 
 export const createUserSchema = z.object({
   name: z.string().min(1),
+
   username: z
     .string()
     .min(1)
     .refine(async (value) => User.isUnique('username', value), {
       message: 'Username already exists',
     }),
+
   email: z
     .string()
     .email('This is not a valid email')
     .refine(async (value) => User.isUnique('email', value), {
       message: 'Email already exists',
+    })
+    .refine((value) => User.emailRegex.test(value), {
+      message: 'Ensure email follows a valid format.',
     }),
+
   password: z
     .string()
     .min(6, 'Password must be at least 6 characters long')
