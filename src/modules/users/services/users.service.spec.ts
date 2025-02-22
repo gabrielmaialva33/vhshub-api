@@ -2,12 +2,12 @@ import { Test, TestingModule } from '@nestjs/testing';
 
 import { createMock } from '@golevelup/ts-jest';
 
+import { CreateUserDto } from '@src/modules/users/dto/create-user.dto';
 import {
   IUserRepository,
   USERS_REPOSITORY,
 } from '@src/modules/users/interfaces/user.interface';
 import { UsersService } from '@src/modules/users/services/users.service';
-import { CreateUserDto } from '@src/modules/users/dto/create-user.dto';
 
 describe('UsersService', () => {
   let service: UsersService;
@@ -54,8 +54,8 @@ describe('UsersService', () => {
     const createdUser = await service.create(userData);
 
     // repository assertions
-    expect(usersRepository.create).toBeCalledWith(userData);
-    expect(usersRepository.create).toBeCalledTimes(1);
+    expect(usersRepository.create).toHaveBeenCalledWith(userData);
+    expect(usersRepository.create).toHaveBeenCalledTimes(1);
 
     // service assertions
     expect(createdUser).toBeDefined();
