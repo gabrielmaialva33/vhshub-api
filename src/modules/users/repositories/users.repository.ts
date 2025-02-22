@@ -22,8 +22,10 @@ export class UsersRepository implements IUserRepository {
     return this.db<IUser>(User.tableName).where(key, value).first();
   }
 
-  async create(payload: Knex.DbRecordArr<IUser>): Promise<any> {
-    return this.db<IUser>(User.tableName).insert(payload).returning('*');
+  async create(payload: Knex.DbRecordArr<IUser>): Promise<IUser> {
+    return this.db<IUser>(User.tableName)
+      .insert(payload)
+      .returning('*') as unknown as IUser;
   }
 
   async update(id: number, payload: Knex.DbRecordArr<IUser>): Promise<any> {
