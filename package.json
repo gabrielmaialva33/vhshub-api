@@ -24,7 +24,7 @@
     "db:make": "ts-node -r tsconfig-paths/register ./node_modules/knex/bin/cli.js --knexfile ./knexfile.ts migrate:make $1 -x ts",
     "db:reset": "ts-node -r tsconfig-paths/register ./node_modules/knex/bin/cli.js --knexfile ./knexfile.ts migrate:rollback && ts-node -r tsconfig-paths/register ./node_modules/knex/bin/cli.js --knexfile ./knexfile.ts migrate:latest",
     "db:seed": "ts-node -r tsconfig-paths/register ./node_modules/knex/bin/cli.js --knexfile ./knexfile.ts seed:run",
-    "db:prune:sqlite": "rimraf ./src/database/database.sqlite"
+    "db:prune:sqlite": "rimraf ./src/database/db.sqlite"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
