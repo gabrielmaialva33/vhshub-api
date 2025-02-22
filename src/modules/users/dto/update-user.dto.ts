@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { User } from '../entities/user.entity';
+
 export const updateUserSchema = z
   .object({
     name: z.string().min(1).optional(),
