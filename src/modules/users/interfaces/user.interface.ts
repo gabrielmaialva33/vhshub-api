@@ -7,7 +7,7 @@ export interface IUserRepository {
 
   findAll(key: string, value: any): Promise<any[]>;
 
-  fistBy(key: string, value: any): Promise<any>;
+  firstBy(key: string, value: any): Promise<any>;
 
   create(payload: CreateUserDto): Promise<IUser>;
 

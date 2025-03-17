@@ -22,7 +22,7 @@ export class UsersService {
   }
 
   findOne(id: number) {
-    return this.usersRepository.fistBy('id', id);
+    return this.usersRepository.firstBy('id', id);
   }
 
   update(id: number, data: UpdateUserDto) {
