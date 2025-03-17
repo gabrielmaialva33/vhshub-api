@@ -2,7 +2,6 @@ import { Test, TestingModule } from '@nestjs/testing';
 
 import { createMock } from '@golevelup/ts-jest';
 
-import { CreateUserDto } from '@src/modules/users/dto/create-user.dto';
 import {
   IUserRepository,
   USERS_REPOSITORY,
@@ -33,33 +32,28 @@ describe('UsersService', () => {
     expect(usersRepository).toBeDefined();
   });
 
-  it('should call create method', async () => {
-    // todo - create a factory for CreateUserDto (stub) with https://fakerjs.dev/
-    const userData: CreateUserDto = {
-      name: 'John Doe',
-      email: 'jd@email.com',
-      password: '12345678',
-      username: 'johndoe',
-    };
+  describe('findOne method user', () => {
+    it('should return one user', async () => {
+      const userData = {
+        id: 1,
+        name: 'John Doe',
+        email: 'john@example.com',
+        password: '12345678',
+        username: 'johndoe',
+      };
 
-    // mock create method from repository
-    usersRepository.create.mockResolvedValue({
-      id: 1,
-      ...userData,
-      created_at: new Date(),
-      updated_at: new Date(),
+      usersRepository.firstBy = jest.fn().mockResolvedValue({
+        ...userData,
+        created_at: new Date(),
+        updated_at: new Date(),
+      });
+
+      const result = await service.findOne(userData.id);
+
+      expect(usersRepository.firstBy).toHaveBeenCalledWith('id', userData.id);
+
+      expect(result).toBeDefined();
+      expect(result.id).toBe(userData.id);
     });
-
-    // call service method
-    const createdUser = await service.create(userData);
-
-    // repository assertions
-    expect(usersRepository.create).toHaveBeenCalledWith(userData);
-    expect(usersRepository.create).toHaveBeenCalledTimes(1);
-
-    // service assertions
-    expect(createdUser).toBeDefined();
-    expect(createdUser.id).toBeDefined();
-    expect(createdUser.id).toEqual(expect.any(Number));
   });
 });
