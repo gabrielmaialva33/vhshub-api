@@ -8,9 +8,13 @@ import { db } from '@src/database';
 import { User } from '../entities/user.entity';
 
 export class UsersRepository implements IUserRepository {
+  async findAll(key: string, value: any): Promise<IUser[]> {
+    return this.db<IUser>(User.tableName).where(key, value);
+  }
+
   private db: Knex = db;
 
-  list(): Promise<any[]> {
+  async list(): Promise<IUser[]> {
     return this.db<IUser>(User.tableName);
   }
 
@@ -18,7 +22,7 @@ export class UsersRepository implements IUserRepository {
     return this.db<IUser>(User.tableName).where(key, value);
   }
 
-  async fistBy(key: string, value: Knex.Value): Promise<any> {
+  async firstBy(key: string, value: Knex.Value): Promise<any> {
     return this.db<IUser>(User.tableName).where(key, value).first();
   }
 
@@ -35,7 +39,7 @@ export class UsersRepository implements IUserRepository {
       .returning('*');
   }
 
-  async delete(id: number): Promise<any> {
-    return this.db<IUser>(User.tableName).where('id', id).delete();
+  async delete(id: number): Promise<void> {
+    await this.db<IUser>(User.tableName).where('id', id).delete();
   }
 }
