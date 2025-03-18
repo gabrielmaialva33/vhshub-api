@@ -54,6 +54,10 @@ describe('UsersService', () => {
 
       expect(result).toBeDefined();
       expect(result.id).toBe(userData.id);
+      expect(result.name).toBe(userData.name);
+      expect(result.email).toBe(userData.email);
+      expect(result.password).toBe(userData.password);
+      expect(result.username).toBe(userData.username);
     });
   });
 });
