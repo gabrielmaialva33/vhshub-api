@@ -1,38 +1,45 @@
-import { Knex } from 'knex';
 import {
   IUser,
   IUserRepository,
 } from '@src/modules/users/interfaces/user.interface';
+import { Knex } from 'knex';
 
 import { db } from '@src/database';
+import { User } from '../entities/user.entity';
 
 export class UsersRepository implements IUserRepository {
+  async findAll(key: string, value: any): Promise<IUser[]> {
+    return this.db<IUser>(User.tableName).where(key, value);
+  }
+
   private db: Knex = db;
 
-  list(): Promise<any[]> {
-    return this.db<IUser>('users');
+  async list(): Promise<IUser[]> {
+    return this.db<IUser>(User.tableName);
   }
 
   async findBy(key: string, value: Knex.Value): Promise<any[]> {
-    return this.db<IUser>('users').where(key, value);
+    return this.db<IUser>(User.tableName).where(key, value);
   }
 
-  async fistBy(key: string, value: Knex.Value): Promise<any> {
-    return this.db<IUser>('users').where(key, value).first();
+  async firstBy(key: string, value: Knex.Value): Promise<any> {
+    return this.db<IUser>(User.tableName).where(key, value).first();
   }
 
-  async create(payload: Knex.DbRecordArr<IUser>): Promise<any> {
-    return this.db<IUser>('users').insert(payload).returning('*');
+  async create(payload: Knex.DbRecordArr<IUser>): Promise<IUser> {
+    return this.db<IUser>(User.tableName)
+      .insert(payload)
+      .returning('*') as unknown as IUser;
   }
 
   async update(id: number, payload: Knex.DbRecordArr<IUser>): Promise<any> {
-    return this.db<IUser>('users')
+    return this.db<IUser>(User.tableName)
       .where('id', id)
       .update(payload)
       .returning('*');
   }
 
-  async delete(id: number): Promise<any> {
-    return this.db<IUser>('users').where('id', id).delete();
+  async delete(id: number): Promise<void> {
+    await this.db<IUser>(User.tableName).where('id', id).delete();
   }
 }

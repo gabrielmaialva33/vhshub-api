@@ -1,13 +1,15 @@
+import { CreateUserDto } from '@src/modules/users/dto/create-user.dto';
+
 export const USERS_REPOSITORY = Symbol.for('USERS_REPOSITORY');
 
 export interface IUserRepository {
   list(): Promise<any[]>;
 
-  findBy(key: string, value: any): Promise<any[]>;
+  findAll(key: string, value: any): Promise<any[]>;
 
-  fistBy(key: string, value: any): Promise<any>;
+  firstBy(key: string, value: any): Promise<any>;
 
-  create(payload: any): Promise<any>;
+  create(payload: CreateUserDto): Promise<IUser>;
 
   update(id: number, payload: any): Promise<any>;
 
