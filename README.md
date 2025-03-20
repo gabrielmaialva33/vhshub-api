@@ -127,9 +127,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## :clapper: Contributors
 
-| [![Maia](https://avatars.githubusercontent.com/u/26732067?size=100)](https://github.com/gabrielmaialva33) |
-|-----------------------------------------------------------------------------------------------------------|
-| [Maia](https://github.com/gabrielmaialva33)                                                               |
+| [![Maia](https://avatars.githubusercontent.com/u/26732067?size=100)](https://github.com/gabrielmaialva33) | [![Isaque](https://avatars.githubusercontent.com/u/60408303?size=100)](https://github.com/isaqu3d) |
+|-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| [Maia](https://github.com/gabrielmaialva33)                                                               | [Isaque](https://github.com/isaqu3d)                                                               |
 
 **Made with :heartpulse: and VHS static**  
 *"Your hub for movies, from classic to streaming"*
@@ -138,4 +138,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <br/>
 
 <p align="center"><img src="https://raw.githubusercontent.com/gabrielmaialva33/gabrielmaialva33/master/assets/gray0_ctp_on_line.svg?sanitize=true" /></p>
-<p align="center">&copy; 2017-present <a href="https://github.com/gabrielmaialva33/" target="_blank">Maia</a>
+<p align="center">&copy; 2025-present <a href="https://github.com/gabrielmaialva33/" target="_blank">Maia</a> & <a href="https://github.com/isaqu3d/" target="_blank">Isaque</a></p>
